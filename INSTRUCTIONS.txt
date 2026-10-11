@@ -2,7 +2,7 @@ Gregnautics — автор сборки Atl4s_n3m0.
 Репозиторий обновлений: https://github.com/Atl4s/Gregnautics-MPUC
 Ветка: main. Структура файлов:
   meta.json
-  versions/1.0.0/changelog.txt
+  versions/0.5.9/changelog.txt
 
 Modpack Update Checker использует RAW-адрес папки с завершающим /.
 В config/modpack-update-checker/config.json настроено:
@@ -10,7 +10,7 @@ Modpack Update Checker использует RAW-адрес папки с зав�
   advanced.updateCheckerType = 2
   modpackAuthor = Atl4s_n3m0
 
-Версия сборки оставлена 1.0.0, как в исходном конфиге. Это НЕ версия Core.
+Текущая версия сборки: 0.5.9.
 Для будущего релиза:
 1. Допишите объект с его id в конец массива versions в meta.json.
 2. Измените latestVersion на этот id.
@@ -19,9 +19,8 @@ Modpack Update Checker использует RAW-адрес папки с зав�
 Старым установленным сборкам currentVersion менять не нужно: по нему определяется обновление.
 Не удаляйте предыдущие записи из versions.
 
-Для ссылки на загрузку добавьте в объект соответствующей версии:
-  "promotions": { "downloads": { "GitHub": "ССЫЛКА_НА_РЕЛИЗ" } }
-Сейчас выдуманных ссылок на скачивание нет.
+Ссылка на загрузку в объекте версии:
+  "promotions": { "downloads": { "CurseForge": "https://www.curseforge.com/minecraft/modpacks/gregnautics" } }
 
 Уведомление в главном меню: текст без фона, слева внизу, выше строк версии игры.
 Показывается только при доступном обновлении; по нажатию открывает штатный экран MPUC.

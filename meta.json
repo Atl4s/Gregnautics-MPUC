@@ -1,10 +1,15 @@
 {
   "schemaVersion": 1,
   "requiresMpuc": 15,
-  "latestVersion": "1.0.0",
+  "latestVersion": "0.5.9",
   "versions": [
     {
-      "id": "1.0.0"
+      "id": "0.5.9",
+      "promotions": {
+        "downloads": {
+          "CurseForge": "https://www.curseforge.com/minecraft/modpacks/gregnautics"
+        }
+      }
     }
   ]
 }
