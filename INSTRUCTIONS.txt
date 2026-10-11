@@ -1,0 +1,33 @@
+Gregnautics — автор сборки Atl4s_n3m0.
+Репозиторий обновлений: https://github.com/Atl4s/Gregnautics-MPUC
+Ветка: main. Структура файлов:
+  meta.json
+  versions/1.0.0/changelog.txt
+
+Modpack Update Checker использует RAW-адрес папки с завершающим /.
+В config/modpack-update-checker/config.json настроено:
+  updateCheckerId = https://raw.githubusercontent.com/Atl4s/Gregnautics-MPUC/main/
+  advanced.updateCheckerType = 2
+  modpackAuthor = Atl4s_n3m0
+
+Версия сборки оставлена 1.0.0, как в исходном конфиге. Это НЕ версия Core.
+Для будущего релиза:
+1. Допишите объект с его id в конец массива versions в meta.json.
+2. Измените latestVersion на этот id.
+3. Добавьте versions/<id>/changelog.txt с описанием изменений.
+4. В распространяемой новой сборке измените currentVersion на этот же id.
+Старым установленным сборкам currentVersion менять не нужно: по нему определяется обновление.
+Не удаляйте предыдущие записи из versions.
+
+Для ссылки на загрузку добавьте в объект соответствующей версии:
+  "promotions": { "downloads": { "GitHub": "ССЫЛКА_НА_РЕЛИЗ" } }
+Сейчас выдуманных ссылок на скачивание нет.
+
+Уведомление в главном меню: текст без фона, слева внизу, выше строк версии игры.
+Показывается только при доступном обновлении; по нажатию открывает штатный экран MPUC.
+При отключённой проверке, сетевой ошибке или актуальной версии уведомление скрыто.
+Внешний вид обеспечивает клиентская интеграция Gregnautics Core 0.1.21.
+После изменения конфига/ядра полностью перезапустите игру.
+
+Официальный пример формата:
+https://github.com/Modpack-Update-Checker/example-update-checker
